@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 24th Birthday 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <script src="logic.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-brand">Happy Birthday 🌸</div>
+  <button class="burger" id="burgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ DRAWER ════════════════════════════════════ -->
+<div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu">
+  <button class="drawer-item active" data-page="card">
+    <span class="d-icon">🎂</span> The Card
+  </button>
+  <button class="drawer-item" data-page="gallery">
+    <span class="d-icon">📸</span> Our Photos
+  </button>
+  <button class="drawer-item" data-page="wishes">
+    <span class="d-icon">💌</span> My Wishes
+  </button>
+</div>
+
+<!-- ══ PAGE: CARD ════════════════════════════════ -->
+<div class="page active" id="page-card">
+  <div class="card-wrapper">
+    <div class="card">
+
+      <!-- BANNER -->
+      <div class="banner">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+        <div class="age-label">Celebrating SHELLEYYYY</div>
+        <div class="age-number">24</div>
+        <div class="banner-sub">A beautiful new chapter begins for bubu ✨</div>
+      </div>
+
+      <!-- BODY -->
+      <div class="card-body">
+
+        <div class="greeting">Happy Birthday, my lovely girll!</div>
+
+        <div class="divider"><span>❀</span></div>
+
+        <p class="message">
+          Twenty-four years of you — of your laugh, your light, your warmth —
+          and I still can't believe I get to call you mine. Every single day
+          with you is a gift, and today I get to celebrate the most wonderful
+          person in my world. Thank you for being you, and for being mine. I love you to the moon and back.
+          love you lots and thanks for being my best friend and a wonderful girlfriend. Thank you for the patience 
+          and understanding. I love you to the moon and back.
+          🌸
+        </p>
+
+        <div class="icons">
+          <div class="icon-pill"><span class="emoji">🎂</span><span class="label">24 today</span></div>
+          <div class="icon-pill"><span class="emoji">🌹</span><span class="label">Always loved</span></div>
+          <div class="icon-pill"><img src="images/bubu_emoji.gif" alt="Bubu emoji" width="33" height="33"><span class="label">So special</span></div>
+        </div>
+
+        <div class="quote-box">
+          <p><span class="quote-mark">"</span>Here's to a year full of adventures, laughter, and all the tiny perfect moments that make life extraordinary.</p>
+        </div>
+
+        <div class="sign-off">
+          <div class="love">With all my heart,</div>
+          <span class="hearts">💕 💗 💕</span>
+        </div>
+
+        <button class="btn-celebrate" id="celebrateBtn">🎉 Celebrate!</button>
+      </div>
+
+      <div class="card-footer">Made with love, just for you 🌷</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: GALLERY ═════════════════════════════ -->
+<div class="page" id="page-gallery">
+  <div class="gallery-page">
+
+    <div class="gallery-header">
+      <h1>Our Memories 📷</h1>
+      <p>Tap any photo to add your picture &amp; write a caption</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- slot 1 -->
+      <div class="gallery-cell">
+        <div class="photo-slot" id="slot-1">
+          <div class="photo-ring" data-deco="💕"></div>
+          <div class="photo-inner" id="inner-1">
+            <img src="images/photo1.png" alt="Memory 1" />
+            <div class="photo-caption"><span>A photo of Bubu in Porto before the concert</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- slot 2 -->
+      <div class="gallery-cell">
+        <div class="photo-slot" id="slot-2">
+          <div class="photo-ring" data-deco="🌷"></div>
+          <div class="photo-inner" id="inner-2">
+            <img src="images/photo2.png" alt="Memory 2" />
+            <div class="photo-caption"><span>A photo of Bubu and I enjoying a nice dinner at home</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- slot 3 -->
+      <div class="gallery-cell">
+        <div class="photo-slot" id="slot-3">
+          <div class="photo-ring" data-deco="✨"></div>
+          <div class="photo-inner" id="inner-3">
+            <img src="images/photo3.png" alt="Memory 3" />
+            <div class="photo-caption"><span>A photo of Bubu holding her favorite birthday cake</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- slot 4 -->
+      <div class="gallery-cell">
+        <div class="photo-slot" id="slot-4">
+          <div class="photo-ring" data-deco="🎀"></div>
+          <div class="photo-inner" id="inner-4">
+            <img src="images/photo4.png" alt="Memory 4" />
+            <div class="photo-caption"><span>A photo of Bubu and I enjoying a wedding together</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE: WISHES ══════════════════════════════ -->
+<div class="page" id="page-wishes">
+  <div class="wishes-page">
+    <div class="wishes-header">
+      <h1>My Wishes for You 💌</h1>
+      <p>Everything I wish for you at 24</p>
+    </div>
+    <div class="wish-cards">
+      <div class="wish-card">
+        <div class="wish-emoji">🌟</div>
+        <div class="wish-title">May you shine brighter than ever</div>
+        <p class="wish-text">I wish you the courage to chase every dream you've whispered to yourself late at night. You are capable of extraordinary things.</p>
+      </div>
+      <div class="wish-card">
+        <div class="wish-emoji">🫶</div>
+        <div class="wish-title">May love fill every corner of your life</div>
+        <p class="wish-text">Not just mine — but from friends, from family, from strangers who smile at you on the street. You deserve to feel surrounded by warmth always.</p>
+      </div>
+      <div class="wish-card">
+        <div class="wish-emoji">🌸</div>
+        <div class="wish-title">May this year be your favourite yet</div>
+        <p class="wish-text">24 is yours. May it be full of laughter, little adventures, and moments so beautiful they make your heart ache in the best possible way.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
