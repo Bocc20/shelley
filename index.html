@@ -1,179 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy 24th Birthday 🎂</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
-  <script src="logic.js" defer></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shelley Mae Borg</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skipLink" href="#home">Skip to content</a>
 
-<canvas id="confetti-canvas"></canvas>
+    <header class="siteHeader">
+      <div class="container headerInner">
+        <a class="brand" href="#home" data-scroll>
+          <img class="brandMark" src="./images/logo.png" alt="SMB logo" />
+        </a>
 
-<!-- ══ NAV ══════════════════════════════════════ -->
-<nav class="nav">
-  <div class="nav-brand">Happy Birthday 🌸</div>
-  <button class="burger" id="burgerBtn" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- ══ DRAWER ════════════════════════════════════ -->
-<div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu">
-  <button class="drawer-item active" data-page="card">
-    <span class="d-icon">🎂</span> The Card
-  </button>
-  <button class="drawer-item" data-page="gallery">
-    <span class="d-icon">📸</span> Our Photos
-  </button>
-  <button class="drawer-item" data-page="wishes">
-    <span class="d-icon">💌</span> My Wishes
-  </button>
-</div>
-
-<!-- ══ PAGE: CARD ════════════════════════════════ -->
-<div class="page active" id="page-card">
-  <div class="card-wrapper">
-    <div class="card">
-
-      <!-- BANNER -->
-      <div class="banner">
-        <div class="circle c1"></div>
-        <div class="circle c2"></div>
-        <div class="circle c3"></div>
-        <div class="age-label">Celebrating SHELLEYYYY</div>
-        <div class="age-number">24</div>
-        <div class="banner-sub">A beautiful new chapter begins for bubu ✨</div>
+        <nav class="nav" aria-label="Primary">
+          <a class="navLink" href="#home" data-scroll>home</a>
+          <a class="navLink" href="#about" data-scroll>about</a>
+          <a class="navLink" href="#works" data-scroll>works</a>
+          <a class="navLink" href="./contact.html">contact</a>
+        </nav>
       </div>
+    </header>
 
-      <!-- BODY -->
-      <div class="card-body">
+    <main>
+      <section id="home" class="hero section">
+        <div class="container heroGrid">
+          <div class="heroCopy">
+            <p class="kicker">SHELLEY MAE BORG</p>
+            <h1 class="display">
+              SHELLEY<br />
+              MAE BORG
+            </h1>
+            <p class="subtitle">graphic designer</p>
 
-        <div class="greeting">Happy Birthday, my lovely girll!</div>
+            <p class="bodyText">
+              based in malta, creating bold, minimal and experimental visual identities and
+              digital experiences.
+            </p>
 
-        <div class="divider"><span>❀</span></div>
+            <a class="ctaLink" href="#works" data-scroll>
+              view my work <span aria-hidden="true">↓</span>
+            </a>
+          </div>
 
-        <p class="message">
-          Twenty-four years of you — of your laugh, your light, your warmth —
-          and I still can't believe I get to call you mine. Every single day
-          with you is a gift, and today I get to celebrate the most wonderful
-          person in my world. Thank you for being you, and for being mine. I love you to the moon and back.
-          love you lots and thanks for being my best friend and a wonderful girlfriend. Thank you for the patience 
-          and understanding. I love you to the moon and back.
-          🌸
-        </p>
-
-        <div class="icons">
-          <div class="icon-pill"><span class="emoji">🎂</span><span class="label">24 today</span></div>
-          <div class="icon-pill"><span class="emoji">🌹</span><span class="label">Always loved</span></div>
-          <div class="icon-pill"><img src="images/bubu_emoji.gif" alt="Bubu emoji" width="33" height="33"><span class="label">So special</span></div>
-        </div>
-
-        <div class="quote-box">
-          <p><span class="quote-mark">"</span>Here's to a year full of adventures, laughter, and all the tiny perfect moments that make life extraordinary.</p>
-        </div>
-
-        <div class="sign-off">
-          <div class="love">With all my heart,</div>
-          <span class="hearts">💕 💗 💕</span>
-        </div>
-
-        <button class="btn-celebrate" id="celebrateBtn">🎉 Celebrate!</button>
-      </div>
-
-      <div class="card-footer">Made with love, just for you 🌷</div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ══ PAGE: GALLERY ═════════════════════════════ -->
-<div class="page" id="page-gallery">
-  <div class="gallery-page">
-
-    <div class="gallery-header">
-      <h1>Our Memories 📷</h1>
-      <p>Tap any photo to add your picture &amp; write a caption</p>
-    </div>
-
-    <div class="gallery-grid">
-
-      <!-- slot 1 -->
-      <div class="gallery-cell">
-        <div class="photo-slot" id="slot-1">
-          <div class="photo-ring" data-deco="💕"></div>
-          <div class="photo-inner" id="inner-1">
-            <img src="images/photo1.png" alt="Memory 1" />
-            <div class="photo-caption"><span>A photo of Bubu in Porto before the concert</span></div>
+          <div class="heroArt" aria-hidden="true">
+            <div class="pixelMotif">
+              <img src="./images/logo.png" alt="" />
+            </div>
+            <div class="accentSquares accentSquaresBlue"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- slot 2 -->
-      <div class="gallery-cell">
-        <div class="photo-slot" id="slot-2">
-          <div class="photo-ring" data-deco="🌷"></div>
-          <div class="photo-inner" id="inner-2">
-            <img src="images/photo2.png" alt="Memory 2" />
-            <div class="photo-caption"><span>A photo of Bubu and I enjoying a nice dinner at home</span></div>
+      <section id="about" class="about section">
+        <div class="container aboutGrid">
+          <div class="aboutCopy">
+            <p class="eyebrow">
+              <span class="eyebrowMark" aria-hidden="true"></span>
+              shell we design?
+            </p>
+            <p class="bodyText">
+              I combine structure and experimentation to create visuals that are clean,
+              intentional and a little unexpected.
+            </p>
+
+            <a class="textLink" href="#works" data-scroll>about me →</a>
+          </div>
+
+          <div class="aboutMedia">
+            <div class="portraitPlaceholder" role="img" aria-label="Portrait placeholder"></div>
+            <div class="pixelOverlay" aria-hidden="true">
+              <img src="./images/logo.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- slot 3 -->
-      <div class="gallery-cell">
-        <div class="photo-slot" id="slot-3">
-          <div class="photo-ring" data-deco="✨"></div>
-          <div class="photo-inner" id="inner-3">
-            <img src="images/photo3.png" alt="Memory 3" />
-            <div class="photo-caption"><span>A photo of Bubu holding her favorite birthday cake</span></div>
+      <section id="works" class="works section">
+        <div class="container">
+          <div class="sectionHeader">
+            <h2 class="sectionTitle">WORKS</h2>
+            <a class="textLink" href="#works" data-scroll>view all works →</a>
+          </div>
+
+          <div class="worksGrid" aria-label="Work projects">
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbA" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Vision Forge</h3>
+              <p class="workMeta">branding</p>
+            </article>
+
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbB" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Flow Create</h3>
+              <p class="workMeta">digital experience</p>
+            </article>
+
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbC" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Design Pulse</h3>
+              <p class="workMeta">editorial design</p>
+            </article>
+
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbD" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Nature Forge</h3>
+              <p class="workMeta">branding</p>
+            </article>
+
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbE" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Plastic Paradise</h3>
+              <p class="workMeta">poster design</p>
+            </article>
+
+            <article class="workCard" tabindex="0">
+              <div class="workThumb thumbF" role="img" aria-label="Project thumbnail placeholder"></div>
+              <h3 class="workTitle">Abstract Motion</h3>
+              <p class="workMeta">digital art</p>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- slot 4 -->
-      <div class="gallery-cell">
-        <div class="photo-slot" id="slot-4">
-          <div class="photo-ring" data-deco="🎀"></div>
-          <div class="photo-inner" id="inner-4">
-            <img src="images/photo4.png" alt="Memory 4" />
-            <div class="photo-caption"><span>A photo of Bubu and I enjoying a wedding together</span></div>
+      <section class="quoteBand section" aria-label="Testimonial">
+        <div class="container quoteInner">
+          <blockquote class="quote">
+            shelley is a rare combination of aesthetic vision and technical skill.
+            her work is always thoughtful, original and executed with precision.
+          </blockquote>
+          <div class="quoteByline">— studio malta</div>
+          <a class="quoteLink" href="#about" data-scroll>read more reviews →</a>
+        </div>
+      </section>
+
+      <section class="cta section" aria-label="Call to action">
+        <div class="container ctaGrid">
+          <h2 class="ctaTitle displaySmall">
+            LET’S CREATE<br />
+            SOMETHING<br />
+            TOGETHER.
+          </h2>
+
+          <div class="ctaDetails">
+            <div class="ctaRow">
+              <div class="ctaLabel">email me</div>
+              <div class="ctaValue">shelleymaeborg@gmail.com</div>
+            </div>
+            <div class="ctaRow">
+              <div class="ctaLabel">call me</div>
+              <div class="ctaValue">+356 77473173</div>
+            </div>
+            <div class="ctaRow">
+              <div class="ctaLabel">socials</div>
+              <div class="ctaValue">@shelleymaeborg</div>
+            </div>
+          </div>
+
+          <div class="ctaMotif" aria-hidden="true">
+            <div class="pixelMotif pixelMotifSmall">
+              <img src="./images/logo.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-    </div>
-  </div>
-</div>
+    <footer class="siteFooter">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <img class="footerMark" src="./images/logo.png" alt="SMB logo" />
+          <div class="footerTagline">shell we design?</div>
+        </div>
 
-<!-- ══ PAGE: WISHES ══════════════════════════════ -->
-<div class="page" id="page-wishes">
-  <div class="wishes-page">
-    <div class="wishes-header">
-      <h1>My Wishes for You 💌</h1>
-      <p>Everything I wish for you at 24</p>
-    </div>
-    <div class="wish-cards">
-      <div class="wish-card">
-        <div class="wish-emoji">🌟</div>
-        <div class="wish-title">May you shine brighter than ever</div>
-        <p class="wish-text">I wish you the courage to chase every dream you've whispered to yourself late at night. You are capable of extraordinary things.</p>
-      </div>
-      <div class="wish-card">
-        <div class="wish-emoji">🫶</div>
-        <div class="wish-title">May love fill every corner of your life</div>
-        <p class="wish-text">Not just mine — but from friends, from family, from strangers who smile at you on the street. You deserve to feel surrounded by warmth always.</p>
-      </div>
-      <div class="wish-card">
-        <div class="wish-emoji">🌸</div>
-        <div class="wish-title">May this year be your favourite yet</div>
-        <p class="wish-text">24 is yours. May it be full of laughter, little adventures, and moments so beautiful they make your heart ache in the best possible way.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <nav class="footerNav" aria-label="Footer">
+          <a class="footerLink" href="#home" data-scroll>home</a>
+          <a class="footerLink" href="#about" data-scroll>about</a>
+          <a class="footerLink" href="#works" data-scroll>works</a>
+          <a class="footerLink" href="./contact.html">contact</a>
+        </nav>
 
-</body>
+        <div class="footerRight">
+          <div class="footerLegal">© 2026 shelley mae borg</div>
+          <div class="footerLegal">all rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./functions.js"></script>
+  </body>
 </html>
