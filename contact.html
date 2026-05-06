@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Shelley Mae Borg</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skipLink" href="#contact">Skip to content</a>
+
+    <header class="siteHeader">
+      <div class="container headerInner">
+        <a class="brand" href="./index.html">
+          <img class="brandMark" src="./images/logo.png" alt="SMB logo" />
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="navLink" href="./index.html#home">home</a>
+          <a class="navLink" href="./index.html#about">about</a>
+          <a class="navLink" href="./index.html#works">works</a>
+          <a class="navLink navLinkContact" href="./contact.html" aria-current="page">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact" class="contactHero section">
+        <div class="container contactGrid">
+          <div class="contactCopy">
+            <p class="kicker">CONTACT</p>
+            <h1 class="display contactTitle">
+              LET’S CREATE<br />
+              SOMETHING<br />
+              TOGETHER.
+            </h1>
+            <p class="bodyText contactIntro">
+              Tell me what you’re building. I’ll reply with next steps, timelines, and a clear
+              direction.
+            </p>
+
+            <div class="contactDetails">
+              <div class="contactDetail">
+                <div class="contactLabel">email</div>
+                <div class="contactValue">shelleymaeborg@gmail.com</div>
+              </div>
+              <div class="contactDetail">
+                <div class="contactLabel">call</div>
+                <div class="contactValue">+356 77473173</div>
+              </div>
+              <div class="contactDetail">
+                <div class="contactLabel">socials</div>
+                <div class="contactValue">@shelleymaeborg</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contactPanel">
+            <div class="contactPanelHeader">
+              <p class="eyebrow">
+                <span class="eyebrowMark" aria-hidden="true"></span>
+                send a message
+              </p>
+              <p class="bodyText contactHint">I usually respond within 1–2 business days.</p>
+            </div>
+
+            <!-- formspree form -->
+            <form
+              id="contactForm"
+              class="contactForm"
+              action="https://formspree.io/f/xdabkkyw"
+              method="POST"
+              novalidate
+            >
+              <label class="field">
+                <span class="fieldLabel">name</span>
+                <input class="fieldInput" name="name" type="text" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="fieldLabel">email</span>
+                <input
+                  class="fieldInput"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+
+              <label class="field fieldMessage">
+                <span class="fieldLabel">message</span>
+                <textarea
+                  class="fieldTextarea"
+                  name="message"
+                  rows="6"
+                  autocomplete="off"
+                  required
+                ></textarea>
+              </label>
+
+              <div class="formRow">
+                <button class="btnPrimary" type="submit">
+                  <span class="btnText">send message</span>
+                  <span class="btnSpinner" aria-hidden="true"></span>
+                </button>
+                <div class="formStatus" role="status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <img class="footerMark" src="./images/logo.png" alt="SMB logo" />
+          <div class="footerTagline">shell we design?</div>
+        </div>
+
+        <nav class="footerNav" aria-label="Footer">
+          <a class="footerLink" href="./index.html#home">home</a>
+          <a class="footerLink" href="./index.html#about">about</a>
+          <a class="footerLink" href="./index.html#works">works</a>
+          <a class="footerLink" href="./contact.html" aria-current="page">contact</a>
+        </nav>
+
+        <div class="footerRight">
+          <div class="footerLegal">© 2026 shelley mae borg</div>
+          <div class="footerLegal">all rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="contactModal" aria-hidden="true">
+      <div class="modalBackdrop" data-modal-close></div>
+      <div
+        class="modalDialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contactModalTitle"
+        aria-describedby="contactModalDesc"
+      >
+        <h2 class="modalTitle" id="contactModalTitle">Message sent</h2>
+        <p class="modalDesc" id="contactModalDesc">
+          Thanks — I’ll get back to you soon.
+        </p>
+        <div class="modalActions">
+          <button class="btnSecondary" type="button" data-modal-close>close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./functions.js"></script>
+  </body>
+</html>
